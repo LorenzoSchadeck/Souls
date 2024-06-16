@@ -80,22 +80,16 @@ public class Player : MonoBehaviour
         {
             if (isRunning)
             {
-                playerAnimator.SetBool("isRunning", true);
-                playerAnimator.SetBool("isWalking", false);
-                playerAnimator.SetBool("isIdle", false);
+                playerAnimator.SetInteger("state", 2);
             }
             else
             {
-                playerAnimator.SetBool("isRunning", false);
-                playerAnimator.SetBool("isWalking", true);
-                playerAnimator.SetBool("isIdle", false);
+                playerAnimator.SetInteger("state", 1);
             }
         }
         else
         {
-            playerAnimator.SetBool("isRunning", false);
-            playerAnimator.SetBool("isWalking", false);
-            playerAnimator.SetBool("isIdle", true);
+            playerAnimator.SetInteger("state", 0);
         } 
     }
 
